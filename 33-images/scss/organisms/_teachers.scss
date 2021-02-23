@@ -1,0 +1,24 @@
+@use "../settings/variables";
+
+.g-teachers {
+  --teachers-background-color: #{variables.$background-lighter-color};
+
+  .dark-theme & {
+    --teachers-background-color: #{variables.$background-darker-color};
+  }
+
+  background: var(--teachers-background-color);
+
+  &__collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__avatar {
+    overflow: hidden;
+    max-width: 15rem;
+    margin: 1rem;
+    border-radius: 50%;
+  }
+}

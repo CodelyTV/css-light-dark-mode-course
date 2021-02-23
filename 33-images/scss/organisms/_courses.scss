@@ -1,0 +1,28 @@
+@use "../settings/variables";
+
+.g-courses {
+  --courses-background-color: #{variables.$background-lighter-color};
+  --courses-border-color: #{variables.$border-inverted-color};
+
+  .dark-theme & {
+    --courses-background-color: #{variables.$background-darker-color};
+    --courses-border-color: #{variables.$border-color};
+  }
+
+  border-bottom: 1px solid var(--courses-border-color);
+  background: var(--courses-background-color);
+
+  &__filters {
+    margin-bottom: 3rem;
+  }
+
+  &__grid {
+    column-width: 18rem;
+    gap: 1.87rem;
+  }
+
+  &__item {
+    margin-bottom: 1.87rem;
+    break-inside: avoid;
+  }
+}
