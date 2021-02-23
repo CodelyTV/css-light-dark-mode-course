@@ -1,0 +1,46 @@
+@use "../settings/variables";
+
+.m-switch {
+  --switch-color: #{variables.$background-dark-color};
+
+  .dark-theme & {
+    --switch-color: #{variables.$background-light-color};
+  }
+
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__toggle {
+    width: 2.6rem;
+    padding: 0.2rem;
+    border: 2px solid var(--switch-color);
+    margin: 0 0.2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s;
+
+    &::after {
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      background-color: var(--switch-color);
+      border-radius: 0.5rem;
+      content: '';
+      transition: all 0.3s;
+    }
+  }
+
+  &__checkbox:checked + .m-switch__toggle::after {
+    transform: translateX(100%);
+  }
+
+  &__checkbox:focus + .m-switch__toggle {
+    --switch-color: #{variables.$primary-color};
+  }
+
+  &__icon {
+    fill: var(--switch-color);
+  }
+}

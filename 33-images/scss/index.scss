@@ -23,6 +23,7 @@
 // Molecules
 @use "molecules/card";
 @use "molecules/dropdown";
+@use "molecules/switch";
 
 // Organisms
 @use "organisms/courses";
@@ -33,3 +34,4 @@
 
 // Utilities
 @use "utilities/error";
+@use "utilities/sr-only";

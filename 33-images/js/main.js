@@ -1,8 +1,8 @@
 function setUpThemeToggle() {
-  const themeBtn = document.getElementById("themeToggle");
+  const themeToggle = document.getElementById("themeToggle");
   let isDarkThemeOn = false;
 
-  themeBtn.addEventListener("click", () => {
+  themeToggle.addEventListener("change", () => {
     document.documentElement.classList.toggle("dark-theme");
     isDarkThemeOn = !isDarkThemeOn;
   });

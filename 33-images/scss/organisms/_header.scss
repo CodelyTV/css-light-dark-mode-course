@@ -19,11 +19,15 @@
     fill: var(--brand-text-color);
   }
 
-  &__nav {
+  &__content {
     @include mixins.justify;
 
     padding-top: variables.$spacing-s;
     padding-bottom: variables.$spacing-s;
+  }
+
+  &__nav {
+    margin: 0 2rem 0 auto;
   }
 
   &__link {
