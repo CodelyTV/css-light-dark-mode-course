@@ -1,8 +1,16 @@
 @use "../settings/variables";
 
 .g-courses {
-  border-bottom: 1px solid variables.$border-inverted-color;
-  background: variables.$background-lighter-color;
+  --courses-background-color: #{variables.$background-lighter-color};
+  --courses-border-color: #{variables.$border-inverted-color};
+
+  .dark-theme & {
+    --courses-background-color: #{variables.$background-darker-color};
+    --courses-border-color: #{variables.$border-color};
+  }
+
+  border-bottom: 1px solid var(--courses-border-color);
+  background: var(--courses-background-color);
 
   &__filters {
     margin-bottom: 3rem;

@@ -1,11 +1,19 @@
 @use "../settings/variables";
 
 .m-card {
+  --card-background-color: var(--background-color);
+  --card-text-color: var(--text-muted-color);
+
+  .dark-theme & {
+    --card-background-color: #{variables.$background-dark-color};
+    --card-text-color: #{variables.$text-inverted-color};
+  }
+
   padding: 1rem;
-  background: variables.$background-lightest-color;
+  background: var(--card-background-color);
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  color: variables.$text-muted-color;
+  color: var(--card-text-color);
 
   &__img {
     display: block;

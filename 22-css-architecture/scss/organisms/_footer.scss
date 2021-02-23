@@ -2,7 +2,7 @@
 @use "../tools/mixins";
 
 .g-footer {
-  background: variables.$background-light-color;
+  background: var(--background-closer-color);
 
   &__links {
     @include mixins.justify;
@@ -14,7 +14,7 @@
     svg {
       max-width: 1rem;
       margin-left: 0.5rem;
-      fill: variables.$text-muted-color;
+      fill: var(--text-muted-color);
     }
   }
 
@@ -24,14 +24,14 @@
   }
 
   a {
-    color: variables.$text-muted-color;
+    color: var(--text-muted-color);
     opacity: 0.7;
     text-decoration: none;
     transition: all 0.2s;
 
     &:hover,
     &:focus {
-      color: variables.$text-muted-color;
+      color: var(--text-muted-color);
       opacity: 1;
     }
   }

@@ -8,10 +8,12 @@ $_boulder: #777;
 $_white: #fff;
 $_alabaster: #f9f9f9;
 $_gallery: #ececec;
+$_alto: #d3d3d3;
 
 $primary-color: $_eucalyptus;
 $primary-dark-color: $_green-pea;
 $brand-text-color: $_pickled-bluewood;
+$brand-text-inverted-color: $_alto;
 
 $background-dark-color: $_baltic-sea;
 $background-darker-color: $_cod-gray;
@@ -22,6 +24,7 @@ $background-lightest-color: $_white;
 $text-color: $_cod-gray;
 $text-muted-color: $_dove-gray;
 $text-inverted-color: $_white;
+$text-inverted-muted-color: $_gallery;
 
 $border-color: $_dove-gray;
 $border-inverted-color: $_gallery;

@@ -1,0 +1,19 @@
+@use "../settings/variables";
+
+:root {
+  --background-color: #{variables.$background-lightest-color};
+  --background-closer-color: #{variables.$background-light-color};
+  --text-color: #{variables.$text-color};
+  --text-muted-color: #{variables.$text-muted-color};
+  --brand-text-color: #{variables.$brand-text-color};
+  --border-color: #{variables.$border-inverted-color};
+
+  &.dark-theme {
+    --background-color: #{variables.$background-darker-color};
+    --background-closer-color: #{variables.$background-dark-color};
+    --text-color: #{variables.$text-inverted-color};
+    --text-muted-color: #{variables.$text-inverted-muted-color};
+    --brand-text-color: #{variables.$brand-text-inverted-color};
+    --border-color: #{variables.$border-color};
+  }
+}

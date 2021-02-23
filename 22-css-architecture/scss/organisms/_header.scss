@@ -7,8 +7,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: variables.$background-light-color;
-  color: variables.$text-muted-color;
+  background: var(--background-closer-color);
+  color: var(--text-muted-color);
 
   &__brand {
     display: block;
@@ -16,7 +16,7 @@
   }
 
   &__brand-text {
-    fill: variables.$brand-text-color;
+    fill: var(--brand-text-color);
   }
 
   &__nav {
@@ -27,7 +27,7 @@
   }
 
   &__link {
-    color: variables.$text-muted-color;
+    color: var(--text-muted-color);
     font-size: variables.$fs-menu;
     font-weight: 600;
     letter-spacing: 0.03em;
@@ -40,6 +40,7 @@
     &--cta {
       padding: 0.4em 1em;
       border: solid 2px variables.$primary-color;
+      background: transparent;
       border-radius: 2px;
       cursor: pointer;
       font-size: 0.95em;
@@ -47,7 +48,7 @@
     }
 
     &:hover {
-      color: variables.$text-muted-color;
+      color: var(--text-muted-color);
       opacity: 0.8;
     }
   }

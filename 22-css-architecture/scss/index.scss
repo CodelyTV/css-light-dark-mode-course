@@ -2,6 +2,9 @@
 @use "generic/normalize";
 @use "generic/box-sizing";
 
+// Theme
+@use "theme";
+
 // Elements
 @use "elements/body";
 @use "elements/headings";
