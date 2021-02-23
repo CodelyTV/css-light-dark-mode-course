@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  padding: 2rem;
+  background: #e3e3e3;
+  color: #222;
+  font-family: sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+img {
+  display: block;
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 50rem;
+}
+
+.btn,
+.btn:hover,
+.btn:focus {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 2px solid #289f5f;
+  border-radius: 0.3rem;
+  color: #444;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus {
+  border-color: #36ab67;
+  background: #36ab67;
+  color: #fff;
+}
+
+.highlights {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 20rem;
+  margin: 1rem;
+  padding-top: 1.5rem;
+  background: #eee;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.card > * {
+  padding: 0 1.5rem;
+}
+
+.card__btn {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  background: #289f5f;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+}
+
+.card__btn:hover {
+  background: #36ab67;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+}
+
+.dark-theme main {
+  background: #222;
+  color: #ccc;
+}
+
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3 {
+  color: #f0f0f0;
+}
+
+.dark-theme .btn {
+  color: #fff;
+}
+
+.dark-theme .card {
+  background: #333;
+}

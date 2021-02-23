@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #e3e3e3;
+  --text-color: #222;
+  --button-color: #289f5f;
+  --button-hover-color: #36ab67;
+  --button-text-color: #444;
+  --button-text-hover-color: #fff;
+  --card-background-color: #eee;
+}
+
+:root.dark-theme {
+  --background-color: #222;
+  --text-color: #ccc;
+  --button-text-color: #ccc;
+  --button-text-hover-color: #fff;
+  --card-background-color: #333;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  padding: 2rem;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+img {
+  display: block;
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 50rem;
+}
+
+.btn,
+.btn:hover,
+.btn:focus {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 2px solid var(--button-color);
+  border-radius: 0.3rem;
+  color: var(--button-text-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus {
+  border-color: var(--button-hover-color);
+  background: var(--button-hover-color);
+  color: var(--button-text-hover-color);
+}
+
+.highlights {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 20rem;
+  margin: 1rem;
+  padding-top: 1.5rem;
+  background: var(--card-background-color);
+  border-radius: 0.3rem;
+  overflow: hidden;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.card > * {
+  padding: 0 1.5rem;
+}
+
+.card__btn {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  background: var(--button-color);
+  border: none;
+  color: var(--button-text-hover-color);
+  text-decoration: none;
+}
+
+.card__btn:hover {
+  background: var(--button-hover-color);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+}
