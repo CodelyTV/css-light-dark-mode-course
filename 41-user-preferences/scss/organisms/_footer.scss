@@ -1,0 +1,38 @@
+@use "../settings/variables";
+@use "../tools/mixins";
+
+.g-footer {
+  background: var(--background-closer-color);
+
+  &__links {
+    @include mixins.justify;
+
+    font-size: variables.$fs-footer;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    svg {
+      max-width: 1rem;
+      margin-left: 0.5rem;
+      fill: var(--text-muted-color);
+    }
+  }
+
+  &__legal {
+    padding-bottom: variables.$spacing-l;
+    border-top: 1px solid rgba(variables.$border-color, 0.5);
+  }
+
+  a {
+    color: var(--text-muted-color);
+    opacity: 0.7;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover,
+    &:focus {
+      color: var(--text-muted-color);
+      opacity: 1;
+    }
+  }
+}

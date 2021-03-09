@@ -1,0 +1,44 @@
+@use "../settings/variables";
+
+.a-btn {
+  --btn-background-color: #{variables.$primary-color};
+
+  display: inline-block;
+  padding: 0.75rem 1.87rem;
+  border: none;
+  background: var(--btn-background-color);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: variables.$fs-btn;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s;
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  &--primary {
+    color: variables.$text-inverted-color;
+
+    &:hover,
+    &:focus {
+      --btn-background-color: #{variables.$primary-dark-color};
+
+      color: variables.$text-inverted-color;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      --btn-background-color: #{variables.$primary-dark-color};
+
+      &:hover,
+      &:focus {
+        --btn-background-color: #{rgba(variables.$primary-dark-color, 0.7)};
+      }
+    }
+  }
+}
