@@ -1,0 +1,7 @@
+img {
+  max-width: 100%;
+
+  @media (prefers-color-scheme: dark) {
+    filter: opacity(0.95) saturate(90%);
+  }
+}
