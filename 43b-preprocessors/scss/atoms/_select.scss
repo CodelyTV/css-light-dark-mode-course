@@ -1,0 +1,14 @@
+@use "../settings/variables";
+
+.a-select {
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url("/img/icons/caret.svg");
+  background-position: right 0.4rem top 50%;
+  background-repeat: no-repeat;
+  border-radius: 0.5em;
+}
