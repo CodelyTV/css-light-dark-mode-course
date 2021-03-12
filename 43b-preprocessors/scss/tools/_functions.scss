@@ -1,0 +1,3 @@
+@function light-dark($light, $dark) {
+  @return var(--light, #{$light}) var(--dark, #{$dark});
+}

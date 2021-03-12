@@ -1,0 +1,57 @@
+@use "../settings/variables";
+@use "../tools/functions";
+
+:root {
+  --ON: initial;
+  /* stylelint-disable declaration-block-semicolon-space-before */
+  --OFF: ;
+  /* stylelint-enable declaration-block-semicolon-space-before */
+  --light: var(--ON);
+  --dark: var(--OFF);
+
+  &.dark-theme {
+    --light: var(--OFF);
+    --dark: var(--ON);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --light: var(--OFF);
+    --dark: var(--ON);
+
+    &.light-theme {
+      --light: var(--ON);
+      --dark: var(--OFF);
+    }
+  }
+
+  --background-color:
+    #{functions.light-dark(
+      variables.$background-lightest-color,
+      variables.$background-darker-color
+    )};
+  --background-closer-color:
+    #{functions.light-dark(
+      variables.$background-light-color,
+      variables.$background-dark-color
+    )};
+  --text-color:
+    #{functions.light-dark(
+      variables.$text-color,
+      variables.$text-inverted-color
+    )};
+  --text-muted-color:
+    #{functions.light-dark(
+      variables.$text-muted-color,
+      variables.$text-inverted-muted-color
+    )};
+  --brand-text-color:
+    #{functions.light-dark(
+      variables.$brand-text-color,
+      variables.$brand-text-inverted-color
+    )};
+  --border-color:
+    #{functions.light-dark(
+      variables.$border-inverted-color,
+      variables.$border-color
+    )};
+}
