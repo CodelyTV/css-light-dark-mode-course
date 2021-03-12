@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #e3e3e3;
+  --text-color: #222;
+  --button-color: #289f5f;
+  --button-hover-color: #36ab67;
+  --button-text-color: #444;
+  --button-text-hover-color: #fff;
+  --card-background-color: #eee;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #222;
+    --text-color: #ccc;
+    --button-text-color: #ccc;
+    --button-text-hover-color: #fff;
+    --card-background-color: #333;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  padding: 2rem;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 25rem;
+  max-width: 90%;
+}
+
+label {
+  display: block;
+}
+
+.field {
+  margin: 1rem 0;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+}
+
+.btn,
+.btn:hover,
+.btn:focus {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 2px solid var(--button-color);
+  border-radius: 0.3rem;
+  color: var(--button-text-color);
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus {
+  border-color: var(--button-hover-color);
+  background: var(--button-hover-color);
+  color: var(--button-text-hover-color);
+}
