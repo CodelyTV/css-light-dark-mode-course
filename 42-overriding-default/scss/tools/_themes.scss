@@ -1,0 +1,15 @@
+@mixin light-dark($key, $light, $dark) {
+  #{$key}: $light;
+
+  .dark-theme & {
+    #{$key}: $dark;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #{$key}: $dark;
+
+    .light-theme & {
+      #{$key}: $light;
+    }
+  }
+}

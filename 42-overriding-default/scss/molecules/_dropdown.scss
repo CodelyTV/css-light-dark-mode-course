@@ -1,0 +1,63 @@
+@use "../settings/variables";
+@use "../tools/mixins";
+
+.m-dropdown {
+  @include mixins.light-dark(
+    --dropdown-background-color,
+    var(--background-color),
+    #{rgba(variables.$background-dark-color, 0.7)}
+  );
+  @include mixins.light-dark(
+    --dropdown-text-color,
+    #{variables.$primary-dark-color},
+    #{variables.$primary-color}
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__label {
+    display: inline-block;
+    margin-right: 1rem;
+    vertical-align: middle;
+  }
+
+  &__field {
+    position: relative;
+    display: inline-block;
+    min-width: 143px;
+    height: 3.71428571em;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    background: var(--dropdown-background-color);
+    border-radius: 6px;
+  }
+
+  &__list {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    overflow: hidden;
+    max-height: 1.85714286em;
+  }
+
+  &__item {
+    display: none;
+
+    &--active {
+      display: block;
+      color: var(--dropdown-text-color);
+
+      &::after {
+        position: relative;
+        bottom: 2px;
+        display: inline-block;
+        margin-left: 6px;
+        content: "\25bc";
+        font-size: 8px;
+        transform: scaleX(1.4) scaleY(0.9);
+      }
+    }
+  }
+}
