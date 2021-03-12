@@ -1,0 +1,32 @@
+@use "../settings/variables";
+@use "../tools/mixins";
+
+.g-courses {
+  @include mixins.light-dark(
+    --courses-background-color,
+    #{variables.$background-lighter-color},
+    #{variables.$background-darker-color}
+  );
+  @include mixins.light-dark(
+    --courses-border-color,
+    #{variables.$border-inverted-color},
+    #{variables.$border-color}
+  );
+
+  border-bottom: 1px solid var(--courses-border-color);
+  background: var(--courses-background-color);
+
+  &__filters {
+    margin-bottom: 3rem;
+  }
+
+  &__grid {
+    column-width: 18rem;
+    gap: 1.87rem;
+  }
+
+  &__item {
+    margin-bottom: 1.87rem;
+    break-inside: avoid;
+  }
+}
